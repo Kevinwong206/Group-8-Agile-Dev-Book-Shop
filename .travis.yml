@@ -10,7 +10,7 @@ services:
 
 before_install:
   - mysql -e 'CREATE DATABASE book_shop'
-  - mysql book_shop > default.sql
+  - mysql book_shop < default.sql
 
 before script:
   - composer update
