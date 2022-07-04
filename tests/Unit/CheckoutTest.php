@@ -2,7 +2,7 @@
 
 namespace Tests\Unit;
 
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase;
 use Session;
 
 class CheckoutTest extends TestCase
@@ -106,8 +106,10 @@ class CheckoutTest extends TestCase
         //$getData = $getFunction->updateHeader(1,2,True);
         //$compareData =  ["qty" => 1, "price" => 2, "login" => TRUE];
         //$this->assertEquals($compareData,$getData);
+        
         $response = $this->get('/');
-        $response ->assertStatus(200);
+
+        $response->assertStatus(200);
     }
     
 }
