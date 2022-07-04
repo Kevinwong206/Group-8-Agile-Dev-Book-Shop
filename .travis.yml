@@ -18,6 +18,5 @@ before script:
   - php artisan key:generate
   - php artisan migrate:fresh --seed
 
-  script:
+script:
   - php artisan test
-#test
