@@ -5,5 +5,18 @@ php:
 
 os: linux
 
+services:
+  - mysql
+
+before_install:
+  - mysql -e 'CREATE DATABASE book_shop'
+
 before script:
-- composer update
+  - composer update
+  - composer install --no-interaction
+  - cp .env.example .env
+  - php artisan key:generate
+  - php artisan migrate:fresh --seed
+
+  script:
+  - php artisan test
