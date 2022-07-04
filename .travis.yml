@@ -20,3 +20,4 @@ before script:
 
   script:
   - php artisan test
+#test
