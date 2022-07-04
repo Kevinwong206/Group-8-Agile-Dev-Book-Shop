@@ -144,10 +144,13 @@ class ShoppingCartController extends Controller
         return $insufficientStock;
     }
 
+<<<<<<< Updated upstream
 
 
 
 
+=======
+>>>>>>> Stashed changes
     public function updateSession($newPrice,$newQty){
         Session:: put('numItem',$newQty);
         Session:: put('priceItem',$newPrice);
